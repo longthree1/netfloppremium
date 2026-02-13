@@ -340,3 +340,84 @@ body {
     display: none;
   }
 }
+/* ===== RESPONSIVE CHO ĐIỆN THOẠI ===== */
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  .nav {
+    padding: 0 20px;
+    height: 55px;
+  }
+  .nav__logo {
+    height: 28px;
+  }
+  .nav__avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Banner */
+  .banner {
+    height: 350px;
+  }
+  .banner__contents {
+    margin-left: 20px;
+    padding-top: 120px;
+  }
+  .banner__title {
+    font-size: 28px;
+  }
+  .banner__description {
+    display: none; /* Ẩn mô tả để tiết kiệm không gian */
+  }
+  .banner__buttons {
+    margin-top: 10px;
+  }
+  .banner__button {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  /* Hàng phim */
+  .row {
+    margin-left: 20px;
+  }
+  .row h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .row__posters {
+    gap: 6px;
+    padding: 10px 0;
+  }
+  .row__poster {
+    width: 120px;
+    height: 180px;
+  }
+  .row__posterLarge {
+    width: 150px;
+    height: 225px;
+  }
+
+  /* Badge chất lượng */
+  .quality-badge {
+    font-size: 9px;
+    padding: 3px 5px;
+    top: 5px;
+    right: 5px;
+  }
+
+  /* Overlay tên phim */
+  .poster-overlay-title {
+    font-size: 11px;
+  }
+
+  /* Ẩn nút cuộn trái/phải trên mobile (vì dùng tay cuộn) */
+  .scroll-btn {
+    display: none;
+  }
+
+  /* Lightbox cho sắp chiếu (nếu có) */
+  .lightbox-caption {
+    font-size: 14px;
+  }
+}
