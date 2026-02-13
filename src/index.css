@@ -334,13 +334,7 @@ body {
   background: linear-gradient(to left, rgba(0,0,0,0.8) 0%, transparent 100%);
 }
 
-/* --- Tùy chỉnh cho mobile (ẩn nút) --- */
-@media screen and (max-width: 768px) {
-  .scroll-btn {
-    display: none;
-  }
-}
-/* ===== RESPONSIVE CHO ĐIỆN THOẠI ===== */
+/* ===== RESPONSIVE CHO ĐIỆN THOẠI – GIỮ NÚT BẤM, CẮT ẢNH NHƯ NETFLIX ===== */
 @media screen and (max-width: 768px) {
   /* Navbar */
   .nav {
@@ -385,13 +379,28 @@ body {
     font-size: 18px;
     margin-bottom: 8px;
   }
+
+  /* Container của hàng phim – giữ nguyên để nút bấm hoạt động */
+  .row__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Danh sách poster – cuộn ngang bằng tay vẫn được */
   .row__posters {
     gap: 6px;
     padding: 10px 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
+
+  /* Poster – giữ nguyên kích thước, ảnh sẽ tự cắt nếu thừa (object-fit: cover) */
   .row__poster {
     width: 120px;
     height: 180px;
+    object-fit: cover; /* Quan trọng: ảnh sẽ cắt bớt nếu không vừa khung */
   }
   .row__posterLarge {
     width: 150px;
@@ -411,9 +420,18 @@ body {
     font-size: 11px;
   }
 
-  /* Ẩn nút cuộn trái/phải trên mobile (vì dùng tay cuộn) */
+  /* Nút cuộn trái/phải – GIỮ NGUYÊN, chỉ điều chỉnh kích thước cho vừa */
   .scroll-btn {
-    display: none;
+    display: flex; /* Đảm bảo hiện trên mobile */
+    width: 35px;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Tăng vùng bấm cho dễ thao tác trên mobile */
+  .scroll-left, .scroll-right {
+    height: 80%;
+    top: 10%;
   }
 
   /* Lightbox cho sắp chiếu (nếu có) */
