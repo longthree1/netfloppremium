@@ -13,7 +13,7 @@ export const nowPlaying = [
     id: 1,
     title: 'ZOOTOPIA 2',
     poster: '/images/mixi.png',
-    banner: '',
+    banner: '/images/mixi.png',
     description: 'Zootopia 2 \nĐưa khán giả trở lại thế giới động vật đầy màu sắc. Câu chuyện diễn ra một tuần sau phần một, khi Judy Hopps (thỏ) và Nick Wilde (cáo) đã chính thức trở thành cặp bài trùng của Sở Cảnh sát Zootopia \nNhiệm vụ mới của họ là truy bắt Gary DeSnake, một nghi phạm bò sát bí ẩn xuất hiện, gây xáo trộn thành phố . Cuộc điều tra buộc hai cảnh sát phải thâm nhập vào những khu vực chưa từng được khám phá, như Khu chợ Đầm lầy, và đối đầu với một thế lực đen tối đã bị che giấu suốt một thế kỷ qua.',
     youtubeId: 'jNQXAC9IVRw',
   },
