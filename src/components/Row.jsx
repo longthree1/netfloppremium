@@ -5,7 +5,7 @@ function Row({ title, movies, isLargeRow }) {
   const navigate = useNavigate();
   const rowRef = useRef(null);
 
-  // Hàm xử lý cuộn ngang
+  
   const scroll = (direction) => {
     if (rowRef.current) {
       const { scrollLeft, clientWidth } = rowRef.current;
@@ -16,9 +16,9 @@ function Row({ title, movies, isLargeRow }) {
     }
   };
 
-  // Hàm random badge chất lượng (4K, HD...)
+  
   const getRandomBadge = () => {
-    const badges = ['4K', 'HD', 'FHD', 'UHD'];
+    const badges = ['4K'];
     return badges[Math.floor(Math.random() * badges.length)];
   };
 

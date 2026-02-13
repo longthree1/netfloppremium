@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Thêm dòng này
+import { Link } from 'react-router-dom'; 
 
 function Navbar() {
   const [show, setShow] = useState(false);

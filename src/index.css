@@ -434,7 +434,8 @@ body {
   }
 
   /* Nút cuộn – sát rìa, dễ bấm */
-  .scroll-btn {
+   .scroll-btn {
+    
     position: absolute;
     top: 0;
     bottom: 0;
@@ -476,6 +477,7 @@ body {
       height: 270px;
     }
     .scroll-btn {
+      display: none;
       width: 40px;
       font-size: 35px;
     }

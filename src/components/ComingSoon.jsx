@@ -32,7 +32,7 @@ function ComingSoon({ movies }) {
   };
 
   const getRandomBadge = () => {
-    const badges = ['4K', 'HD', 'FHD', 'UHD'];
+    const badges = ['Trailer'];
     return badges[Math.floor(Math.random() * badges.length)];
   };
 
