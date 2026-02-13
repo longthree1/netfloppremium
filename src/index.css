@@ -386,3 +386,48 @@ body {
     font-size: 14px;
   }
 }
+/* Container cho nút cuộn và posters */
+.row__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Nút cuộn */
+.scroll-btn {
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row__container:hover .scroll-btn {
+  opacity: 1;
+}
+
+.scroll-left {
+  left: 0;
+  background: linear-gradient(to right, black, transparent);
+}
+
+.scroll-right {
+  right: 0;
+  background: linear-gradient(to left, black, transparent);
+}
+
+/* Ẩn nút trên mobile (vì đã có cuộn bằng tay) */
+@media screen and (max-width: 768px) {
+  .scroll-btn {
+    display: none;
+  }
+}
