@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { ip, userAgent, device, os, browser, time } = req.body;
+  const { ip, device, os, browser, time } = req.body;
 
   const now = Date.now();
   const lastSent = ipCache.get(ip);
