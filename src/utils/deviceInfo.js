@@ -1,5 +1,6 @@
 // src/utils/deviceInfo.js
 export function getDeviceInfo() {
+  console.log('sendTelegramInfo được gọi!'); 
   const ua = navigator.userAgent;
   let device = 'Unknown';
   let os = 'Unknown';
