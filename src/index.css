@@ -334,7 +334,7 @@ body {
   background: linear-gradient(to left, rgba(0,0,0,0.8) 0%, transparent 100%);
 }
 
-/* ===== RESPONSIVE CHO MOBILE (GIỮ NÚT, ẢNH ĐẸP) ===== */
+/* ===== MOBILE – HIỂN THỊ 2 POSTER CHUẨN, KHÔNG BIẾN DẠNG ===== */
 @media screen and (max-width: 768px) {
   /* Navbar */
   .nav {
@@ -361,7 +361,7 @@ body {
     font-size: 28px;
   }
   .banner__description {
-    display: none; /* Ẩn mô tả nếu cần */
+    display: none;
   }
   .banner__buttons {
     margin-top: 10px;
@@ -371,7 +371,7 @@ body {
     font-size: 14px;
   }
 
-  /* Row */
+  /* Hàng phim */
   .row {
     margin-left: 20px;
   }
@@ -380,37 +380,44 @@ body {
     margin-bottom: 8px;
   }
 
-  /* Container để nút bấm hoạt động */
+  /* Container chứa nút và poster */
   .row__container {
     position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
+    overflow: visible;
   }
 
-  /* Danh sách poster */
+  /* Danh sách poster – đảm bảo cuộn ngang */
   .row__posters {
-    gap: 8px;
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các poster */
     padding: 10px 0;
     overflow-x: auto;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    /* Ẩn thanh cuộn mặc định */
     scrollbar-width: none;
+    width: 100%;
   }
   .row__posters::-webkit-scrollbar {
     display: none;
   }
 
-  /* Poster – kích thước lớn hơn */
+  /* Poster – kích thước chuẩn, không biến dạng */
+  .poster-container {
+    flex-shrink: 0; /* Không co lại */
+  }
   .row__poster {
-    width: 140px;   /* Tăng lên so với trước */
-    height: 210px;   /* Tỉ lệ 2:3 */
-    object-fit: cover; /* Cắt ảnh nếu thừa */
+    width: 170px;      /* Điều chỉnh để vừa 2 poster */
+    height: 255px;      /* Tỉ lệ 2:3 */
+    object-fit: cover;  /* QUAN TRỌNG: cắt ảnh vừa khung, không kéo giãn */
     border-radius: 4px;
+    display: block;     /* Tránh lỗi inline */
   }
   .row__posterLarge {
-    width: 175px;
-    height: 262px;
+    width: 210px;
+    height: 315px;
   }
 
   /* Badge chất lượng */
@@ -426,19 +433,25 @@ body {
     font-size: 12px;
   }
 
-  /* Nút cuộn – hiện rõ, dễ bấm */
+  /* Nút cuộn – sát rìa, dễ bấm */
   .scroll-btn {
-    display: flex;
-    width: 40px;
-    height: 70%; /* Cao hơn để dễ bấm */
-    top: 15%;
-    font-size: 35px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 45px;
     background: rgba(0, 0, 0, 0.6);
-    border-radius: 0;
+    color: white;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.8; /* Luôn thấy một chút, khi hover sẽ đậm hơn */
+    opacity: 0.8;
     transition: opacity 0.2s;
+    height: 80%;
+    top: 10%;
   }
   .scroll-left {
     left: 0;
@@ -452,24 +465,19 @@ body {
     opacity: 1;
   }
 
-  /* Lightbox (nếu có) */
-  .lightbox-caption {
-    font-size: 14px;
-  }
-}
-
-/* Điều chỉnh cho màn hình rất nhỏ (dưới 400px) */
-@media screen and (max-width: 400px) {
-  .row__poster {
-    width: 120px;
-    height: 180px;
-  }
-  .row__posterLarge {
-    width: 150px;
-    height: 225px;
-  }
-  .scroll-btn {
-    width: 35px;
-    font-size: 30px;
+  /* Màn hình rất nhỏ (dưới 400px) */
+  @media screen and (max-width: 400px) {
+    .row__poster {
+      width: 150px;
+      height: 225px;
+    }
+    .row__posterLarge {
+      width: 180px;
+      height: 270px;
+    }
+    .scroll-btn {
+      width: 40px;
+      font-size: 35px;
+    }
   }
 }
