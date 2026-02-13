@@ -16,7 +16,7 @@ function Row({ title, movies, isLargeRow }) {
   };
 
   const getRandomBadge = () => {
-    const badges = ['4K', 'HD', 'FHD', 'UHD'];
+    const badges = ['4K'];
     return badges[Math.floor(Math.random() * badges.length)];
   };
 
