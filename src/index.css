@@ -364,8 +364,112 @@ body {
   }
 }
 
-/* Màn hình rất nhỏ (dưới 480px) */
+/* Điện thoại nhỏ (dưới 480px) */
 @media screen and (max-width: 480px) {
+  .nav {
+    padding: 0 15px;
+    height: 50px;
+  }
+  .nav__logo {
+    height: 25px;
+  }
+  .nav__avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .banner {
+    height: 300px;
+  }
+  .banner__contents {
+    margin-left: 15px;
+    padding-top: 100px;
+  }
+  .banner__title {
+    font-size: 24px;
+  }
+  .banner__description {
+    display: none; /* Ẩn mô tả để tiết kiệm không gian */
+  }
+  .banner__buttons {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .banner__button {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .row {
+    margin-left: 15px;
+  }
+  .row h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .row__poster {
+    width: 110px;
+    height: 165px;
+  }
+  .row__posterLarge {
+    width: 140px;
+    height: 210px;
+  }
+  .poster-title {
+    font-size: 11px;
+    max-width: 110px;
+  }
+  .quality-badge {
+    font-size: 8px;
+    padding: 2px 4px;
+    top: 3px;
+    right: 3px;
+  }
+
+  /* Ẩn nút cuộn trên mobile (vì đã có cuộn bằng tay) */
+  .scroll-btn {
+    display: none;
+  }
+
+  /* Đảm bảo container cuộn ngang hoạt động tốt */
+  .row__posters {
+    padding: 5px 0;
+    gap: 5px;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Điện thoại vừa và lớn (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .nav {
+    padding: 0 25px;
+    height: 60px;
+  }
+  .nav__logo {
+    height: 30px;
+  }
+
+  .banner {
+    height: 350px;
+  }
+  .banner__contents {
+    margin-left: 25px;
+    padding-top: 120px;
+  }
+  .banner__title {
+    font-size: 28px;
+  }
+  .banner__description {
+    max-width: 300px;
+    font-size: 13px;
+  }
+
+  .row {
+    margin-left: 25px;
+  }
+  .row h2 {
+    font-size: 18px;
+  }
   .row__poster {
     width: 120px;
     height: 180px;
@@ -374,60 +478,28 @@ body {
     width: 150px;
     height: 225px;
   }
-  .banner__title {
-    font-size: 28px;
+  .poster-title {
+    font-size: 12px;
+    max-width: 120px;
   }
-  .banner__description {
-    max-width: 220px;
-    font-size: 13px;
+  .quality-badge {
+    font-size: 9px;
+    padding: 3px 5px;
   }
-  .banner__button {
-    padding: 6px 16px;
-    font-size: 14px;
-  }
-}
-/* Container cho nút cuộn và posters */
-.row__container {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
 
-/* Nút cuộn */
-.scroll-btn {
-  position: absolute;
-  width: 50px;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border: none;
-  font-size: 40px;
-  cursor: pointer;
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.row__container:hover .scroll-btn {
-  opacity: 1;
-}
-
-.scroll-left {
-  left: 0;
-  background: linear-gradient(to right, black, transparent);
-}
-
-.scroll-right {
-  right: 0;
-  background: linear-gradient(to left, black, transparent);
-}
-
-/* Ẩn nút trên mobile (vì đã có cuộn bằng tay) */
-@media screen and (max-width: 768px) {
   .scroll-btn {
-    display: none;
+    display: none; /* Ẩn nút trên tablet/mobile */
+  }
+}
+
+/* Tablet ngang và desktop nhỏ (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .row__poster {
+    width: 160px;
+    height: 240px;
+  }
+  .row__posterLarge {
+    width: 200px;
+    height: 300px;
   }
 }
