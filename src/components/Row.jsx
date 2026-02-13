@@ -5,6 +5,7 @@ function Row({ title, movies, isLargeRow }) {
   const navigate = useNavigate();
   const rowRef = useRef(null);
 
+  // Hàm xử lý cuộn ngang
   const scroll = (direction) => {
     if (rowRef.current) {
       const { scrollLeft, clientWidth } = rowRef.current;
@@ -15,8 +16,9 @@ function Row({ title, movies, isLargeRow }) {
     }
   };
 
+  // Hàm random badge chất lượng (4K, HD...)
   const getRandomBadge = () => {
-    const badges = ['4K'];
+    const badges = ['4K', 'HD', 'FHD', 'UHD'];
     return badges[Math.floor(Math.random() * badges.length)];
   };
 
@@ -24,7 +26,12 @@ function Row({ title, movies, isLargeRow }) {
     <div className="row">
       <h2>{title}</h2>
       <div className="row__container">
-        <button className="scroll-btn scroll-left" onClick={() => scroll('left')}>‹</button>
+        {/* Nút cuộn trái */}
+        <button className="scroll-btn scroll-left" onClick={() => scroll('left')}>
+          ‹
+        </button>
+
+        {/* Danh sách poster */}
         <div className="row__posters" ref={rowRef}>
           {movies.map((movie) => (
             <div key={movie.id} className="poster-container">
@@ -41,7 +48,11 @@ function Row({ title, movies, isLargeRow }) {
             </div>
           ))}
         </div>
-        <button className="scroll-btn scroll-right" onClick={() => scroll('right')}>›</button>
+
+        {/* Nút cuộn phải */}
+        <button className="scroll-btn scroll-right" onClick={() => scroll('right')}>
+          ›
+        </button>
       </div>
     </div>
   );
