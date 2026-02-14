@@ -229,11 +229,6 @@ body {
   font-size: 18px;
 }
 
-.poster-container {
-  position: relative;
-  display: inline-block;
-  margin-right: 10px;
-}
 
 /*chất lượng 4k... */
 .quality-badge {
@@ -246,7 +241,6 @@ body {
   font-weight: bold;
   padding: 4px 8px;
   border-radius: 4px;
-  border-left: 2px solid 2px solid #ffffff;
   text-transform: uppercase;
   z-index: 2;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
