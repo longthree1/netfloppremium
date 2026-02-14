@@ -13,7 +13,6 @@ export const nowPlaying = [
     id: 1,
     title: 'ZOOTOPIA 2',
     poster: '/images/zooposter.png',
-    banner: '',
     description: 'Zootopia 2 \nĐưa khán giả trở lại thế giới động vật đầy màu sắc. Câu chuyện diễn ra một tuần sau phần một, khi Judy Hopps (thỏ) và Nick Wilde (cáo) đã chính thức trở thành cặp bài trùng của Sở Cảnh sát Zootopia \nNhiệm vụ mới của họ là truy bắt Gary DeSnake, một nghi phạm bò sát bí ẩn xuất hiện, gây xáo trộn thành phố . Cuộc điều tra buộc hai cảnh sát phải thâm nhập vào những khu vực chưa từng được khám phá, như Khu chợ Đầm lầy, và đối đầu với một thế lực đen tối đã bị che giấu suốt một thế kỷ qua.',
     youtubeId: 'jNQXAC9IVRw',
   },
@@ -21,7 +20,6 @@ export const nowPlaying = [
     id: 2,
     title: 'THÁNH GIÓNG 2025',
     poster: '/images/2025.png',
-    banner: '',
     description: '-MADE BY NHÓM ĐẸP TRAI- \nThánh Gióng \nTừ một cậu bé làng Gióng lên ba không biết nói, không biết cười, vươn mình hóa thành tráng sĩ cao lớn, cưỡi ngựa sắt, nhổ tre làng đánh đuổi giặc Ân xâm lược. Hành trình kỳ vĩ của người anh hùng làng Gióng, biểu tượng bất diệt cho tinh thần yêu nước và sức mạnh chống ngoại xâm của dân tộc Việt Nam.',
     youtubeId: '6xMWK8Sy7eU',
   },
@@ -29,9 +27,15 @@ export const nowPlaying = [
     id: 3,
     title: 'Alo, Vũ à Vũ',
     poster: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5xG6ifHifoo24bDEPHmlNGxplDMTjShrQfQ&s',  
-    banner: '', 
     description: '- Mình là Độ - \n- Thỉnh thoảng rảnh chó ko có gì làm mình hay edit clip vui, tất cả đều do team mình chơi tự nhiên, trong clip có khá nhiều từ ngữ bậy bạ nên các bạn lưu ý xung quanh trước khi xem - ',
     youtubeId: 'oyEOohYtgvI',
+  },
+  {
+    id: 4,
+    title: 'Yến Chi của chúng tôi!',
+    poster: 'https://i.ibb.co/Gv3TQvbQ/phimultra.png',  
+    description: '-Yến Chi của chúng tôi!- \nChuyện gì sẽ xảy ra khi 5 chàng trai tỏa sáng của nhóm Cortis vô tình bị \"thu phục\" bởi sự mộc mạc của một cô gái Việt? Cùng đón xem những khoảnh khắc rung động đầu đời vừa đáng yêu, vừa day dứt trong phim ngắn \"Yến Chi\". ',
+    youtubeId: 'WXS-o57VJ5w',
   },
 
 ];
