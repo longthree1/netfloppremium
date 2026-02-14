@@ -30,13 +30,7 @@ export const nowPlaying = [
     description: '- Mình là Độ - \n- Thỉnh thoảng rảnh chó ko có gì làm mình hay edit clip vui, tất cả đều do team mình chơi tự nhiên, trong clip có khá nhiều từ ngữ bậy bạ nên các bạn lưu ý xung quanh trước khi xem - ',
     youtubeId: 'oyEOohYtgvI',
   },
-  {
-    id: 4,
-    title: 'Yến Chi của chúng tôi!',
-    poster: 'https://i.ibb.co/Gv3TQvbQ/phimultra.png',  
-    description: '-Yến Chi của chúng tôi!- \nChuyện gì sẽ xảy ra khi 5 chàng trai tỏa sáng của nhóm Cortis vô tình bị \"thu phục\" bởi sự mộc mạc của một cô gái Việt? Cùng đón xem những khoảnh khắc rung động đầu đời vừa đáng yêu, vừa day dứt trong phim ngắn \"Yến Chi\". ',
-    youtubeId: 'WXS-o57VJ5w',
-  },
+ 
 
 ];
 
